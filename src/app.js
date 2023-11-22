@@ -20,7 +20,7 @@ const pass_db = process.env.DB_PASS;
 mongoose
   .connect(`mongodb+srv://${user_db}:${pass_db}@cluster0.ivxoajq.mongodb.net`)
   .then(() => {
-    app.listen(3000, () => {
+    app.listen(process.env.PORT, () => {
       console.log('Servidor está rodando na porta 3000');
     });
     console.log('Conectou ao banco de dados');
