@@ -1,10 +1,9 @@
-
-
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/auth/(.*)", "dest": "/auth.js" },
+      { "src": "/user/(.*)", "dest": "/user.js" }
+      
     ]
-}
+  }
+  
