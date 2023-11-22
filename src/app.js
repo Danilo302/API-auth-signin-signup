@@ -9,7 +9,9 @@ import cors from 'cors'
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://api-auth-signin-signup-rjbc.vercel.app/'
+}));
 
 // Configuração do banco de dados
 const user_db = process.env.DB_USER;
